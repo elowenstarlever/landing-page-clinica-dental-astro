@@ -1,0 +1,89 @@
+---
+import "@fontsource/inter/400.css"; 
+import "@fontsource/inter/600.css";
+import "@fontsource/manrope/800.css"; 
+import "../styles/global.css";
+//componetns principales
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+//components segundarios
+import Hero from "../components/Hero.astro";
+import Servicios from "../components/Servicios.astro";
+import Nosotros from "../components/Nosotros.astro";
+import Testimonios from "../components/Testimonios.astro";
+import Agendar from "../components/Agendar.astro";
+
+const title = "Clínica Dental Sonrisa Perfecta | Ortodoncia, Implantes y Blanqueamiento en Lima";
+const description = "Clínica dental Sonrisa Perfecta en Lima ofrece ortodoncia, implantes dentales, blanqueamiento, diseño de sonrisa y tratamientos personalizados para toda tu familia.";
+const canonicalUrl = "https://sonrisaperfecta.com/";
+const imageUrl = "https://sonrisaperfecta.com/cover.png";
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Sonrisa Perfecta",
+  "url": canonicalUrl,
+  "image": imageUrl,
+  "description": description,
+  "telephone": "+51 1123456789",
+  "email": "info@sonrisaperfecta.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. San Borja Norte 123",
+    "addressLocality": "San Borja",
+    "addressRegion": "Lima",
+    "addressCountry": "PE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -12.103,
+    "longitude": -76.999
+  },
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ]
+};
+---
+
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="clínica dental lima, ortodoncia lima, implantes dentales lima, blanqueamiento dental, diseño de sonrisa, clínica dental San Borja" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="theme-color" content="#1677FF" />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={imageUrl} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={imageUrl} />
+		<title>{title}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+	</head>
+	<body>
+		<Header/>
+		<main>
+			<Hero/>
+			<Servicios/>
+			<Nosotros/>
+			<Testimonios/>
+			<Agendar/>
+		</main>
+		<Footer/>
+	</body>
+</html>

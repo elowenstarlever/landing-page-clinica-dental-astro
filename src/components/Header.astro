@@ -1,0 +1,12 @@
+---
+import Navbar from "./Navbar.astro";
+import Button from "./Button.astro";
+---
+
+<header class="w-full flex flex-row items-center justify-evenly bg-white max-[1023px]:justify-between px-2" aria-label="Encabezado principal">
+    <a href="/" aria-label="Inicio Sonrisa Perfecta"> <img src="/logo.png" width="250" height="70" alt="Clínica dental Sonrisa Perfecta"></a>
+    <Navbar/>
+    <div class="max-[473px]:hidden">
+        <Button href="#contacto" />
+    </div>
+</header>

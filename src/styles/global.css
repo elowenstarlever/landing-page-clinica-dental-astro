@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root{
+    --azulPrincipal:#1677FF;
+    --azulHover	:#0F5ED7;
+    --azulClaro: #4DA3FF;
+    --fondoSuave:#f2f5f7;
+    --blanco:#FFFFFF;
+    --textoOscuro:#0F172A;
+    --textoSecundario:#64748B;
+    --bordes:#d7dce2;
+    --azulBadge:#bcd2e9;
+}
+
+
+body{ width: 100%; min-height: 100dvh; background-color: var(--fondoSuave); }
+body { font-family: "Inter", sans-serif; font-weight: 400; } 
+button { font-family: "Inter", sans-serif; font-weight: 600; } 
+h1, h2, h3, h4, h5, h6 { font-family: "Manrope", sans-serif; font-weight: 800; }

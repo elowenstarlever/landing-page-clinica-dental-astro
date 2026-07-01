@@ -1,0 +1,17 @@
+---
+import Badge from './Badge.astro';
+import Button from './Button.astro';
+import StatsSection from './StatsSection.astro'
+---
+
+<section class="bg-[url('/cover.png')] bg-cover bg-center bg-no-repeat w-full h-fit flex flex-col items-center">
+    <section class="w-355 max-[1441px]:w-full max-[1441px]:px-5 h-fit flex flex-col gap-10 py-10">
+        <Badge/>
+        <h1 class="text-7xl leading-tight">
+            Tu <span class="text-(--azulPrincipal)">Sonrisa</span> <br> merece el mejor <br> cuidado
+        </h1>
+        <p class="text-(--textoSecundario) text-[1.15rem] max-w-3xl">Ortodoncia, implantes dentales, blanqueamiento y diseño de sonrisa con tecnología avanzada y un trato personalizado para toda tu familia.</p>
+        <Button href="#contacto" />
+        <StatsSection/>
+    </section>
+</section>
